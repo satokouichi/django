@@ -1,0 +1,9 @@
+# Django specific
+__pycache__/
+*.pyc
+*.pyo
+
+# Other common ignores
+.env
+*.log
+*.sqlite3
