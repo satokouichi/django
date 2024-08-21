@@ -1,5 +1,5 @@
-# ベースイメージを指定
-FROM python:3.9
+ARG PYTHON_VERSION
+FROM python:${PYTHON_VERSION}
 
 # 作業ディレクトリを作成
 WORKDIR /var/www/vhosts
