@@ -12,7 +12,7 @@ RUN pip install --no-cache-dir -r requirements.txt
 COPY . /var/www/vhosts/
 
 # ポートを開放
-EXPOSE 80
+EXPOSE 8080
 
-# コンテナ起動時にDjangoプロジェクトを作成するためのエントリポイントスクリプトを実行
-CMD ["sh", "-c", "django-admin startproject mysite . && gunicorn mysite.wsgi:application --bind 0.0.0.0:80"]
+# CMD ["sh", "-c", "django-admin startproject mysite . && gunicorn mysite.wsgi:application --bind 0.0.0.0:80"]
+CMD ["sh", "-c", "django-admin startproject mysite . && python manage.py runserver 0.0.0.0:80"]
